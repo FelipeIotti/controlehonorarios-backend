@@ -20,7 +20,9 @@ export class DeleteGroupActionUseCase {
 
     const fees = await this.feesRepository.findByNameGroupAction(groupAction.name);
 
-    await this.feesRepository.delete(String(fees.id));
+    if(fees){
+      await this.feesRepository.delete(String(fees.id));
+    }
 
     await this.groupActionRepository.delete(id);
   }

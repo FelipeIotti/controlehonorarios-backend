@@ -8,7 +8,7 @@ export class DeleteLawyersController {
     const {id} = request.params;
 
     const deleteLawyersUseCase = container.resolve(DeleteLawyersUseCase);
-
+    
     await deleteLawyersUseCase.execute({id});
 
     return response.status(201).send();

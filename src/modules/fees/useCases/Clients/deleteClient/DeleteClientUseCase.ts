@@ -20,7 +20,10 @@ export class DeleteClientsUseCase {
 
     const fees = await this.feesRepository.findByNameClient(clients.name);
 
-    await this.feesRepository.delete(String(fees.id));
+    
+    if(fees){
+      await this.feesRepository.delete(String(fees.id));
+    }
 
     await this.clientsRepository.delete(id);
   }

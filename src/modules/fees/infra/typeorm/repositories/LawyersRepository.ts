@@ -59,8 +59,8 @@ export class LawyersRepository implements ILawyersRepository {
   }
 
   async delete(id: string): Promise<void> {
-    const groupAction = await this.repository.findOne(id);
+    const lawyer = await this.repository.findOne(id);
     
-    await this.repository.delete(groupAction);
+    await this.repository.delete(lawyer.id);
   }
 }

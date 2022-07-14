@@ -3,7 +3,7 @@
   "type": "mongodb",
   "port": 27017,
   "host": "localhost",
-  "database": "controleHonorario",
+  "database": "mongodb",
   "useUnifiedTopology": true,
   "entities": ["./dist/modules/**/entities/*.js"]
 }

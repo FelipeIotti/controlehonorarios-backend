@@ -18,10 +18,15 @@ export class DeleteLawyersUseCase {
   async execute({id}:IRequest): Promise<void> {
 
     const lawyer = await this.lawyersRepository.findById(id);
+    
 
     const fees = await this.feesRepository.findByNameLawyer(lawyer.name);
-
-    await this.feesRepository.delete(String(fees.id));
+    
+    if (fees) {
+      await this.feesRepository.delete(String(fees.id));
+    }
+    
+    
     await this.lawyersRepository.delete(id);
   }
 }
