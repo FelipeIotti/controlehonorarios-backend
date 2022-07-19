@@ -28,12 +28,40 @@ export class UpdateLawyersUseCase {
     
     const lawyer = await this.lawyersRepository.findById(id);
 
-    const fees = await this.feesRepository.findByNameLawyer(lawyer.name);
+    let fees = await this.feesRepository.findByNameLawyer1(lawyer.name);
 
     if(fees){
-      fees.lawyers= name;
+      fees.lawyers1= name;
       await this.feesRepository.update(fees);
     }
+   
+    if(!fees){
+      fees = await this.feesRepository.findByNameLawyer2(lawyer.name);
+
+      if(fees){
+        fees.lawyers2= name;
+        await this.feesRepository.update(fees);
+      }
+    }
+
+    if(!fees){
+      fees = await this.feesRepository.findByNameLawyer3(lawyer.name);
+
+      if(fees){
+        fees.lawyers3= name;
+        await this.feesRepository.update(fees);
+      }
+    }
+
+    if(!fees){
+      fees = await this.feesRepository.findByNameLawyer4(lawyer.name);
+
+      if(fees){
+        fees.lawyers4= name;
+        await this.feesRepository.update(fees);
+      }
+    }
+
 
     lawyer.name = name
     lawyer.oab = oab;

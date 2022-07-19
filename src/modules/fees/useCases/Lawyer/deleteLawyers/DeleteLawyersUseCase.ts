@@ -20,7 +20,19 @@ export class DeleteLawyersUseCase {
     const lawyer = await this.lawyersRepository.findById(id);
     
 
-    const fees = await this.feesRepository.findByNameLawyer(lawyer.name);
+    let fees = await this.feesRepository.findByNameLawyer1(lawyer.name);
+
+    if(!fees){
+      fees = await this.feesRepository.findByNameLawyer2(lawyer.name);
+    }
+
+    if(!fees){
+      fees = await this.feesRepository.findByNameLawyer3(lawyer.name);
+    }
+
+    if(!fees){
+      fees = await this.feesRepository.findByNameLawyer4(lawyer.name);
+    }
     
     if (fees) {
       await this.feesRepository.delete(String(fees.id));

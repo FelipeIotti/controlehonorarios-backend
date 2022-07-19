@@ -25,16 +25,22 @@ export class FeesRepository implements IFeesRepository {
     // this.clientsRepository = getMongoRepository(Clients);
   }
 
-  async create({clients,group_action,lawyers,opposing_party,status,payment_date,value,endDate}: IFeesDTO): Promise<void> {
+  async create({clients,group_action,lawyers1,lawyers2,lawyers3,lawyers4,opposing_party,status,payment_date,value1,value2,value3,value4,endDate}: IFeesDTO): Promise<void> {
     const fees = this.repository.create({
       
       clients,
       group_action,
-      lawyers,
+      lawyers1,
+      lawyers2,
+      lawyers3,
+      lawyers4,
       opposing_party,
       status,
       payment_date,
-      value,
+      value1,
+      value2,
+      value3,
+      value4,
       endDate
       });
     await this.repository.save(fees);
@@ -49,6 +55,7 @@ export class FeesRepository implements IFeesRepository {
     });
     return fees;
   }
+  
   async findByNameClient(name: string): Promise<Fees> {
 
     const fees = await this.repository.findOne({
@@ -60,16 +67,50 @@ export class FeesRepository implements IFeesRepository {
     return fees;
   }
 
-  async findByNameLawyer(name: string): Promise<Fees> {
+  async findByNameLawyer1(name: string): Promise<Fees> {
 
     const fees = await this.repository.findOne({
       where: {
-       'lawyers': { $eq: `${name}`}
+       'lawyers1': { $eq: `${name}`}
       }
     });
 
     return fees;
   }
+
+  async findByNameLawyer2(name: string): Promise<Fees> {
+
+    const fees = await this.repository.findOne({
+      where: {
+       'lawyers2': { $eq: `${name}`}
+      }
+    });
+
+    return fees;
+  }
+
+  async findByNameLawyer3(name: string): Promise<Fees> {
+
+    const fees = await this.repository.findOne({
+      where: {
+       'lawyers3': { $eq: `${name}`}
+      }
+    });
+
+    return fees;
+  }
+
+  async findByNameLawyer4(name: string): Promise<Fees> {
+
+    const fees = await this.repository.findOne({
+      where: {
+       'lawyers4': { $eq: `${name}`}
+      }
+    });
+
+    return fees;
+  }
+
 
   async findByNameGroupAction(name: string): Promise<Fees> {
 
@@ -95,11 +136,13 @@ export class FeesRepository implements IFeesRepository {
   async update(data:IFeesDTO):Promise<void> {
     const fees = await this.repository.findOne(data.id);
 
-    fees.lawyers = data.lawyers;
+    fees.lawyers1 = data.lawyers1;
+    fees.lawyers2 = data.lawyers2;
     fees.clients = data.clients;
     fees.group_action = data.group_action;
     fees.opposing_party = data.opposing_party;
-    fees.value = data.value;
+    fees.value1 = data.value1;
+    fees.value2 = data.value2;
     fees.status = data.status;
     fees.endDate = data.endDate;
     fees.payment_date = data.payment_date;

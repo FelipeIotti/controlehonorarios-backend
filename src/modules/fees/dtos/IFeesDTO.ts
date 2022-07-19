@@ -3,7 +3,13 @@ import { ObjectID } from "typeorm";
 export interface IFeesDTO {
   id?: ObjectID;
 
-  lawyers: string;
+  lawyers1: string;
+
+  lawyers2: string;
+
+  lawyers3: string;
+
+  lawyers4: string;
 
   clients: string;
 
@@ -11,7 +17,13 @@ export interface IFeesDTO {
 
   opposing_party: string;
 
-  value: string;
+  value1: string;
+
+  value2: string;
+
+  value3: string;
+
+  value4: string;
 
   status: string;
 

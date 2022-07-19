@@ -6,7 +6,16 @@ export class Fees {
   id: ObjectID;
 
   @Column()
-  lawyers: string;
+  lawyers1: string;
+
+  @Column()
+  lawyers2: string;
+
+  @Column()
+  lawyers3: string;
+
+  @Column()
+  lawyers4: string;
 
   @Column()
   clients: string;
@@ -18,7 +27,16 @@ export class Fees {
   opposing_party: string;
 
   @Column()
-  value: string;
+  value1: string;
+
+  @Column()
+  value2: string;
+
+  @Column()
+  value3: string;
+
+  @Column()
+  value4: string;
 
   @Column()
   status: string;

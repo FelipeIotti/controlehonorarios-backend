@@ -43,51 +43,195 @@ export class GeneralQuantityUseCase {
   
       fees.map(fees =>{
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 0){
+        if(fees.lawyers1=== lawyers.name && dayjs(fees.endDate).get('month')=== 0){
           newGeneral.january = newGeneral.january + 1;
         }
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 1){
+        if(fees.lawyers1=== lawyers.name && dayjs(fees.endDate).get('month')=== 1){
           newGeneral.february = newGeneral.february + 1;
         }
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 2){
+        if(fees.lawyers1=== lawyers.name && dayjs(fees.endDate).get('month')=== 2){
           newGeneral.march = newGeneral.march + 1;
         }
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 3){
+        if(fees.lawyers1=== lawyers.name && dayjs(fees.endDate).get('month')=== 3){
           newGeneral.april = newGeneral.april + 1;
         }
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 4){
+        if(fees.lawyers1=== lawyers.name && dayjs(fees.endDate).get('month')=== 4){
           newGeneral.may = newGeneral.may + 1;
         }
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 5){
+        if(fees.lawyers1=== lawyers.name && dayjs(fees.endDate).get('month')=== 5){
           newGeneral.june = newGeneral.june + 1;
         }
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 6){
+        if(fees.lawyers1=== lawyers.name && dayjs(fees.endDate).get('month')=== 6){
           newGeneral.july = newGeneral.july + 1;
         }
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 7){
+        if(fees.lawyers1=== lawyers.name && dayjs(fees.endDate).get('month')=== 7){
           newGeneral.august = newGeneral.august + 1;
         }
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 8){
+        if(fees.lawyers1=== lawyers.name && dayjs(fees.endDate).get('month')=== 8){
           newGeneral.september = newGeneral.september + 1;
         }
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 9){
+        if(fees.lawyers1=== lawyers.name && dayjs(fees.endDate).get('month')=== 9){
           newGeneral.october = newGeneral.october + 1;
         }
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 10){
+        if(fees.lawyers1=== lawyers.name && dayjs(fees.endDate).get('month')=== 10){
           newGeneral.november = newGeneral.november + 1;
         }
 
-        if(fees.lawyers=== lawyers.name && dayjs(fees.endDate).get('month')=== 11){
+        if(fees.lawyers1=== lawyers.name  && dayjs(fees.endDate).get('month')=== 11){
+          newGeneral.december = newGeneral.december + 1;
+        }
+        //2
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 0){
+          newGeneral.january = newGeneral.january + 1;
+        }
+
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 1){
+          newGeneral.february = newGeneral.february + 1;
+        }
+
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 2){
+          newGeneral.march = newGeneral.march + 1;
+        }
+
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 3){
+          newGeneral.april = newGeneral.april + 1;
+        }
+
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 4){
+          newGeneral.may = newGeneral.may + 1;
+        }
+
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 5){
+          newGeneral.june = newGeneral.june + 1;
+        }
+
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 6){
+          newGeneral.july = newGeneral.july + 1;
+        }
+
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 7){
+          newGeneral.august = newGeneral.august + 1;
+        }
+
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 8){
+          newGeneral.september = newGeneral.september + 1;
+        }
+
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 9){
+          newGeneral.october = newGeneral.october + 1;
+        }
+
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 10){
+          newGeneral.november = newGeneral.november + 1;
+        }
+
+        if(fees.lawyers2=== lawyers.name && dayjs(fees.endDate).get('month')=== 11){
+          newGeneral.december = newGeneral.december + 1;
+        }
+        //3 
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 0){
+          newGeneral.january = newGeneral.january + 1;
+        }
+
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 1){
+          newGeneral.february = newGeneral.february + 1;
+        }
+
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 2){
+          newGeneral.march = newGeneral.march + 1;
+        }
+
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 3){
+          newGeneral.april = newGeneral.april + 1;
+        }
+
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 4){
+          newGeneral.may = newGeneral.may + 1;
+        }
+
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 5){
+          newGeneral.june = newGeneral.june + 1;
+        }
+
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 6){
+          newGeneral.july = newGeneral.july + 1;
+        }
+
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 7){
+          newGeneral.august = newGeneral.august + 1;
+        }
+
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 8){
+          newGeneral.september = newGeneral.september + 1;
+        }
+
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 9){
+          newGeneral.october = newGeneral.october + 1;
+        }
+
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 10){
+          newGeneral.november = newGeneral.november + 1;
+        }
+
+        if(fees.lawyers3=== lawyers.name && dayjs(fees.endDate).get('month')=== 11){
+          newGeneral.december = newGeneral.december + 1;
+        }
+        //4
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 0){
+          newGeneral.january = newGeneral.january + 1;
+        }
+
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 1){
+          newGeneral.february = newGeneral.february + 1;
+        }
+
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 2){
+          newGeneral.march = newGeneral.march + 1;
+        }
+
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 3){
+          newGeneral.april = newGeneral.april + 1;
+        }
+
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 4){
+          newGeneral.may = newGeneral.may + 1;
+        }
+
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 5){
+          newGeneral.june = newGeneral.june + 1;
+        }
+
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 6){
+          newGeneral.july = newGeneral.july + 1;
+        }
+
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 7){
+          newGeneral.august = newGeneral.august + 1;
+        }
+
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 8){
+          newGeneral.september = newGeneral.september + 1;
+        }
+
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 9){
+          newGeneral.october = newGeneral.october + 1;
+        }
+
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 10){
+          newGeneral.november = newGeneral.november + 1;
+        }
+
+        if(fees.lawyers4=== lawyers.name && dayjs(fees.endDate).get('month')=== 11){
           newGeneral.december = newGeneral.december + 1;
         }
       });
