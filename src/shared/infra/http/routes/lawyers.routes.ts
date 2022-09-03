@@ -7,6 +7,7 @@ import { UpdateLawyersController } from "@modules/fees/useCases/Lawyer/updateLaw
 import { GeneralController } from "@modules/fees/useCases/Lawyer/general/GeneralController";
 import { GeneralQuantityController } from "@modules/fees/useCases/Lawyer/generalQuantity/GeneralController";
 import { GeneralStatusController } from "@modules/fees/useCases/Lawyer/generalStatus/GeneralController";
+import { ensureAdmin } from "../middlewares/ensureAdmin";
 
 export const lawyersRoutes = Router();
 
@@ -18,13 +19,13 @@ const generalController = new GeneralController();
 const generalQuantityController = new GeneralQuantityController();
 const generalStatusController = new GeneralStatusController();
 
-lawyersRoutes.post('/',createLawyersController.handle);
+lawyersRoutes.post('/',ensureAdmin,createLawyersController.handle);
 
 lawyersRoutes.get('/', listLawyersController.handle);
 
-lawyersRoutes.put('/:id', updateLawyersController.handle);
+lawyersRoutes.put('/:id',ensureAdmin, updateLawyersController.handle);
 
-lawyersRoutes.delete('/:id', deleteLawyersController.handle);
+lawyersRoutes.delete('/:id',ensureAdmin, deleteLawyersController.handle);
 
 lawyersRoutes.get('/general', generalController.handle);
 

@@ -39,6 +39,9 @@ export class Fees {
   value4: string;
 
   @Column()
+  totalValue: string;
+
+  @Column()
   status: string;
 
   @Column()

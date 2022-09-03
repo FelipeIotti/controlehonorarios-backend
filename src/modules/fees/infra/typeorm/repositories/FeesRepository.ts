@@ -25,9 +25,9 @@ export class FeesRepository implements IFeesRepository {
     // this.clientsRepository = getMongoRepository(Clients);
   }
 
-  async create({clients,group_action,lawyers1,lawyers2,lawyers3,lawyers4,opposing_party,status,payment_date,value1,value2,value3,value4,endDate}: IFeesDTO): Promise<void> {
+  async create({totalValue,clients,group_action,lawyers1,lawyers2,lawyers3,lawyers4,opposing_party,status,payment_date,value1,value2,value3,value4,endDate}: IFeesDTO): Promise<void> {
     const fees = this.repository.create({
-      
+      totalValue,
       clients,
       group_action,
       lawyers1,

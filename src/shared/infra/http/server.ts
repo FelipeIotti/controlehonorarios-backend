@@ -3,16 +3,12 @@ import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 import 'express-async-errors';
 
-// import createConnection from '@shared/infra/typeorm'
-//import '../typeorm/index';
 import '@shared/container/index';
-
 
 import { router } from './routes/index';
 import { AppError } from '@shared/errors/AppErros';
 import { createConnection } from 'typeorm';
 
-// createConnection();
 createConnection();
 const app = express();
 

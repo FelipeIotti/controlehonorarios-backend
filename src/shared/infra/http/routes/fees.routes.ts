@@ -6,6 +6,7 @@ import { ListFeesController } from "@modules/fees/useCases/Fees/listFees/ListFee
 import { UpdateFeesController } from "@modules/fees/useCases/Fees/updateFees/UpdateFeesController";
 import {GeneralQuantityController} from '@modules/fees/useCases/Fees/generalQuantity/GeneralController'
 import {GeneralStatusController} from '@modules/fees/useCases/Fees/generalStatus/GeneralController'
+import { ensureAdmin } from "../middlewares/ensureAdmin";
 
 export const feesRoutes = Router();
 
@@ -16,13 +17,13 @@ const deleteFeesController = new DeleteFeesController();
 const generalQuantityController = new GeneralQuantityController();
 const generalStatusController = new GeneralStatusController();
 
-feesRoutes.post('/',createFeesController.handle);
+feesRoutes.post('/',ensureAdmin,createFeesController.handle);
 
 feesRoutes.get('/', listFeesController.handle);
 
-feesRoutes.put('/:id', updateFeesController.handle);
+feesRoutes.put('/:id',ensureAdmin, updateFeesController.handle);
 
-feesRoutes.delete('/:id', deleteFeesController.handle);
+feesRoutes.delete('/:id',ensureAdmin, deleteFeesController.handle);
 
 feesRoutes.get('/generalQuantity', generalQuantityController.handle);
 
